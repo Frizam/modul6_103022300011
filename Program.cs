@@ -10,6 +10,11 @@ SayaTubeVideo[] video = { new SayaTubeVideo("Review Film Scream oleh Frizam") , 
 
 for (int i = 0; i < video.Length; i++)
 {
+    video[i].IncreasePlayCount(100000);
+}
+
+for (int i = 0; i < video.Length; i++)
+{
     video[i].PrintVideoDetails();
 }
 
