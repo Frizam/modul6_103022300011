@@ -16,20 +16,20 @@ namespace modul6_103022300011
         public SayaTubeUser(string username)
         {
             this.Username = username;
-            this.uploadedVideos = new List<SayaTubeVideo>();
+            this.uploadedVideos = new List<SayaTubeVideo>(); //menyimpan list baru
         }
 
         public int GetTotalVideoPlayCount() {
             int total = 0;
             for (int i = 0; i < uploadedVideos.Count; i++) {
-                total += uploadedVideos[i].getPlayCount();
+                total += uploadedVideos[i].getPlayCount(); //memabggil getPlaycount untuk mendapatkan value playCount dari video ke i
             }
             return total;
         }   
 
         public void AddVideo(SayaTubeVideo videoBaru) {
             
-            uploadedVideos.Add(videoBaru);
+            uploadedVideos.Add(videoBaru); //menambah objek baru ke list
         }
 
         public void printAllVideoPlayCount() {

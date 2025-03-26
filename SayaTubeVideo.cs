@@ -31,7 +31,7 @@ namespace modul6_103022300011
         }
 
         public void IncreasePlayCount(int count) {
-            this.playCount += count;
+            this.playCount += count; //menambahkan nilai count dengan nilai playCount sebelumnya
         }
 
         public void PrintVideoDetails()
