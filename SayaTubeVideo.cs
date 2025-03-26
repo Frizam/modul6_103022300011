@@ -15,8 +15,8 @@ namespace modul6_103022300011
 
         public SayaTubeVideo(string title)
         {
-            Debug.Assert(title != null, "judul tidak boleh null");
-            Debug.Assert(title.Length <= 200, "judul maks 200 karakter");
+            Debug.Assert(title != null, "judul tidak boleh null");// precondition
+            Debug.Assert(title.Length <= 200, "judul maks 200 karakter");// precondition
 
             Random rand = new Random();
             this.id = rand.Next(10000, 99999); //generate id random
@@ -35,7 +35,7 @@ namespace modul6_103022300011
         }
 
         public void IncreasePlayCount(int count) {
-            Debug.Assert(count > 0);
+            Debug.Assert(count > 0 && count <= 25000000, "maks 25.000.000");// precondition
 
             this.playCount += count; //menambahkan nilai count dengan nilai playCount sebelumnya
         }
